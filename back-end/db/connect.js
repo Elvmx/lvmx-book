@@ -5,6 +5,7 @@ mongoose
   .connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   })
   .then(() => {
     console.log('数据库连接成功')

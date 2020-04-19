@@ -35,18 +35,19 @@ const upload = multer({
  * @apiSuccess {String} url 访问地址
  *
  * @apiSuccessExample Success-Response:
- *   HTTP/1.1 201 Created
- *   {
- *     "_id": "5e9c2652066bbb2e697761d2",
- *     "originalname": "592bf164N7a4187c3.jpg",
- *     "mimetype": "image/jpeg",
- *     "filename": "a0808bc7b17b51fc01da707ae5060b90",
- *     "size": 21356,
- *     "url": "/files/serve/5e9c2652066bbb2e697761d2",
- *     "__v": 0
- *   }
+ *  HTTP/1.1 201 Created
+    {
+      "_id": "5e9c43b6f9412b0e7d5f196a",
+      "originalname": "5a6abb3eNfd2c6ab9.jpg",
+      "mimetype": "image/jpeg",
+      "filename": "9abe77e3b52e3d6b156c5a4bdefc6a7d",
+      "size": 17428,
+      "createdAt": "2020-04-19T12:27:34.009Z",
+      "updatedAt": "2020-04-19T12:27:34.009Z",
+      "url": "http://localhost:9090/files/serve/5e9c43b6f9412b0e7d5f196a",
+      "__v": 0
+    }
  */
-
 router.post('/', upload.single('file'), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ msg: '请上传文件' })
