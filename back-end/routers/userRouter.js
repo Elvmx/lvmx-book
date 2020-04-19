@@ -30,8 +30,10 @@ router.post('/auth/register', async (req, res) => {
     username: req.body.username,
     password: req.body.password,
   })
+  /* eslint-disable */
   const { password, role, ...result } = user.toJSON()
   res.status(201).send(result)
+  /* eslint-enable */
 })
 
 /**

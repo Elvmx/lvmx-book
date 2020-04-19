@@ -27,7 +27,7 @@ app.use('/books', bookRouter)
 app.use('/', userRouter)
 
 // 统一错误处理
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   console.log(err.message)
   // 响应给前端
   res.status(500).send({
@@ -36,6 +36,6 @@ app.use((err, req, res, next) => {
 })
 
 // 监听端口，启动服务
-const server = app.listen(9090, () => {
+app.listen(9090, () => {
   console.log('服务启动成功')
 })
