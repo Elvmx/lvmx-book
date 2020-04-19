@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const BookModel = require('../db/models/bookModel')
+const auth = require('../middlewares/auth')
 
 /**
  * @api {post} /books 新增图书
@@ -31,7 +32,7 @@ const BookModel = require('../db/models/bookModel')
       "__v": 0
     }
  */
-router.post('/', async (req, res) => {
+router.post('/', auth('admin'), async (req, res) => {
   const book = await BookModel.create(req.body)
   res.status(201).send(book)
 })

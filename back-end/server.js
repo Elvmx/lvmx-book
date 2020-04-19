@@ -10,6 +10,7 @@ dotenv.config()
 // 引入 路由
 const fileRouter = require('./routers/fileRouter')
 const bookRouter = require('./routers/bookRouter')
+const userRouter = require('./routers/userRouter')
 
 // 生成 express 实例
 const app = express()
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/files', fileRouter)
 app.use('/books', bookRouter)
+app.use('/', userRouter)
 
 // 统一错误处理
 app.use((err, req, res, next) => {

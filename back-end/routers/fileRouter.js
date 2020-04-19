@@ -1,7 +1,7 @@
 const express = require('express')
-const FileModel = require('../db/models/fileModel')
 const multer = require('multer')
 const router = express.Router()
+const FileModel = require('../db/models/fileModel')
 
 const upload = multer({
   dest: './uploads/',

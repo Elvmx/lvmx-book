@@ -310,5 +310,119 @@ define({ "api": [
     "filename": "routers/fileRouter.js",
     "groupTitle": "文件",
     "name": "PostFiles"
+  },
+  {
+    "type": "post",
+    "url": "/auth/login",
+    "title": "登录",
+    "group": "用户",
+    "parameter": {
+      "fields": {
+        "Body 参数": [
+          {
+            "group": "Body 参数",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "Body 参数",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>密码</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>token</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "(Success 200) Response:",
+          "content": "HTTP/1.1 200 OK\n   {\n     \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTljNTYxNDE1NmZlYjM4ODZlODIwNjEiLCJ1c2VybmFtZSI6IuadjuWbmyIsImlhdCI6MTU4NzMwNDQ4MywiZXhwIjoxNTg3MzExNjgzfQ.ofhvmyoCT93_D3h2bxX4-9FxGFQ-dKU2pV_RgebANBU\"\n   }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routers/userRouter.js",
+    "groupTitle": "用户",
+    "name": "PostAuthLogin"
+  },
+  {
+    "type": "post",
+    "url": "/auth/register",
+    "title": "注册",
+    "group": "用户",
+    "parameter": {
+      "fields": {
+        "Body 参数": [
+          {
+            "group": "Body 参数",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "Body 参数",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>密码</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 201": [
+          {
+            "group": "Success 201",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>用户id</p>"
+          },
+          {
+            "group": "Success 201",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "Success 201",
+            "type": "String",
+            "optional": false,
+            "field": "avatar",
+            "description": "<p>用户图像</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "(Success 201) Response:",
+          "content": "HTTP/1.1 201 Created\n   {\n     \"avatar\": \"http://localhost:9090/assets/img/avatar.png\",\n     \"_id\": \"5e9c5614156feb3886e82061\",\n     \"username\": \"李四\",\n     \"createdAt\": \"2020-04-19T13:45:56.468Z\",\n     \"updatedAt\": \"2020-04-19T13:45:56.468Z\",\n     \"__v\": 0\n   }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routers/userRouter.js",
+    "groupTitle": "用户",
+    "name": "PostAuthRegister"
   }
 ] });
