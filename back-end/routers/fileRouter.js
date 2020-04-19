@@ -26,15 +26,15 @@ const upload = multer({
  * @api {post} /files 文件上传
  * @apiGroup 文件
  *
- * @apiParam {File} file 文件，目前只支持png与jpeg的图片。
+ * @apiParam (Body 参数) {File} file 文件，目前只支持png与jpeg的图片。
  *
- * @apiSuccess {String} originalname 源文件名
- * @apiSuccess {String} mimetype 文件类型
- * @apiSuccess {String} filename 文件名
- * @apiSuccess {Number} size 文件大小（字节单位）
- * @apiSuccess {String} url 访问地址
+ * @apiSuccess (Success 201) {String} originalname 源文件名
+ * @apiSuccess (Success 201) {String} mimetype 文件类型
+ * @apiSuccess (Success 201) {String} filename 文件名
+ * @apiSuccess (Success 201) {Number} size 文件大小（字节单位）
+ * @apiSuccess (Success 201) {String} url 访问地址
  *
- * @apiSuccessExample Success-Response:
+ * @apiSuccessExample (Success 201) Response:
  *  HTTP/1.1 201 Created
     {
       "_id": "5e9c43b6f9412b0e7d5f196a",
