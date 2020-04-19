@@ -1,0 +1,8 @@
+{
+  "name": "lvmx-book-api",
+  "version": "0.1.0",
+  "url": "http://localhost:9090",
+  "template": {
+    "withCompare": false
+  }
+}

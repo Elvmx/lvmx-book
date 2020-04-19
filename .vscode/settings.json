@@ -1,0 +1,10 @@
+{
+  "window.zoomLevel": 1,
+  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "editor.colorDecorators": false,
+  "editor.wordWrap": "on",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true
+}
