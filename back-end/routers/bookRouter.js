@@ -5,6 +5,7 @@ const auth = require('../middlewares/auth')
 
 /**
  * @api {post} /books 新增图书
+ * @apiPermission admin
  * @apiGroup 图书
  *
  * @apiParam (Body 参数) {String} name 书名

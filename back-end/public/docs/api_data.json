@@ -152,6 +152,11 @@
     "type": "post",
     "url": "/books",
     "title": "新增图书",
+    "permission": [
+      {
+        "name": "admin"
+      }
+    ],
     "group": "图书",
     "parameter": {
       "fields": {
@@ -244,6 +249,11 @@
     "type": "post",
     "url": "/files",
     "title": "文件上传",
+    "permission": [
+      {
+        "name": "admin"
+      }
+    ],
     "group": "文件",
     "parameter": {
       "fields": {

@@ -10,7 +10,8 @@ module.exports = (role) => {
     token = token.replace(/^Bearer /, '')
 
     jsonwebtoken.verify(token, `${process.env.SECRET}`, (err, data) => {
-      console.log(data)
+      console.log('角色信息是：', data.role)
+
       if (err || (role && !data.role.includes(role))) {
         return res.status(401).send(`身份验证失败`)
       }

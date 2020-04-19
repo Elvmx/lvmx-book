@@ -24,6 +24,7 @@ const upload = multer({
 
 /**
  * @api {post} /files 文件上传
+ * @apiPermission admin
  * @apiGroup 文件
  *
  * @apiParam (Body 参数) {File} file 文件，目前只支持png与jpeg的图片。
