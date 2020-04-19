@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"lvmx-book.files"}],"uuid":"f3ba5e2d54764142bf403c2bfc16454d"}
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"lvmx-book.files"}],"uuid":"b525a1c380fa479fa2400bcbcd3b0512"}
