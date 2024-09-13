@@ -1,5 +1,5 @@
 <template>
-    <div class="ly-tmpl-banner__wrap">
+    <div class="ly-tmpl-banner__wrap font-roboto">
         <div class="container relative">
             <img class="ly-tmpl-banner" src="~public/banner.png" alt="" />
 

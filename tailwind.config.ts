@@ -1,12 +1,15 @@
 import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
-    content: [],
+    content: [
+        "./components/**/*.{js,vue,ts}",
+        "./layouts/**/*.vue",
+        "./pages/**/*.vue",
+        "./plugins/**/*.{js,ts}",
+        "./app.vue",
+        "./error.vue",
+    ],
     theme: {
-        fontFamily: {
-            sans: ["Roboto Flex", ...defaultTheme.fontFamily.sans],
-        },
         container: {
             center: true,
         },
@@ -21,7 +24,11 @@ export default {
                 "rgb(var(--color-secondary) / <alpha-value>)": "rgb(111 114 185)",
             },
         },
-        extend: {},
+        extend: {
+            fontFamily: {
+                roboto: ["Roboto Flex"],
+            },
+        },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/typography")],
 } satisfies Config;
