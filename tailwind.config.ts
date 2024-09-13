@@ -13,10 +13,6 @@ export default {
         container: {
             center: true,
         },
-        colors: {
-            primary: "rgb(var(--color-primary) / <alpha-value>)",
-            secondary: "rgb(var(--color-secondary) / <alpha-value>)",
-        },
         // https://github.com/rogden/tailwind-config-viewer?tab=readme-ov-file#themereplacements
         configViewer: {
             themeReplacements: {
@@ -27,6 +23,10 @@ export default {
         extend: {
             fontFamily: {
                 roboto: ["Roboto Flex"],
+            },
+            colors: {
+                primary: "rgb(var(--color-primary) / <alpha-value>)",
+                secondary: "rgb(var(--color-secondary) / <alpha-value>)",
             },
         },
     },

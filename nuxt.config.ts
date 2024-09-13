@@ -8,6 +8,13 @@ export default defineNuxtConfig({
             tailwindcss: {},
         },
     },
+    vue: {
+        compilerOptions: {
+            isCustomElement: (tag) => {
+                return tag.startsWith("swiper-");
+            },
+        },
+    },
     app: {
         head: {
             link: [
@@ -19,7 +26,12 @@ export default defineNuxtConfig({
                      * display=swap 页面会闪烁
                      * display=auto | 不设置   页面不会闪烁
                      */
-                    href: "https://fonts.googleapis.com/css2?family=Roboto+Flex&family=Fira+Code&display=auto",
+                    href: "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Fira+Code&display=auto",
+                },
+            ],
+            script: [
+                {
+                    src: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js",
                 },
             ],
         },
